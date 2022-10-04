@@ -3,6 +3,7 @@
 import math
 import ply.lex as lex
 import ply.yacc as yacc
+#this is calculator on python 
 
 tokens = (
     'NAME',
@@ -43,7 +44,7 @@ def t_NUMBER_INT(t):
 def t_newline(t):
     r'\n+'
     t.lexer.lineno += t.value.count('\n')
-    
+
 def t_error(t):
     print('Illegal character \'%s\'' % t.value[0])
     t.lexer.skip(1)
